@@ -1,0 +1,224 @@
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif /* Letra legible y común */
+}
+
+body {
+    background-color: #f4f4f4; /* Fondo gris muy clarito para no cansar la vista */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- ENCABEZADO (Barra Azul) --- */
+.top-bar {
+    background-color: #003366; /* Azul Marino Institucional */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.top-bar h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* --- LAYOUT (Menú izq + Contenido der) --- */
+.main-container {
+    display: flex;
+    flex: 1; /* Ocupa el resto de la altura */
+    position: relative;
+}
+
+/* --- MENÚ LATERAL --- */
+.sidebar {
+    width: 250px;
+    background-color: #e0e0e0; /* Gris claro */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    padding: 20px;
+    font-size: 18px; /* Letra grande */
+    border-bottom: 1px solid #ccc;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #d0d0d0;
+}
+
+.sidebar a.active {
+    background-color: #b0b0b0; /* Resaltado de opción actual */
+    font-weight: bold;
+}
+
+/* --- ÁREA DE CONTENIDO --- */
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+/* Estilos específicos para centrar cosas (como en el Inicio) */
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- ELEMENTOS DE UI (Botones, Inputs) --- */
+
+/* Botones Generales */
+.btn {
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Colores de Semáforo */
+.btn-blue { background-color: #0056b3; }
+.btn-green { background-color: #28a745; } /* Verde Éxito */
+.btn-red { background-color: #dc3545; }   /* Rojo Peligro */
+.btn-blue-outline {
+    background-color: transparent;
+    border: 2px solid #003366;
+    color: #003366;
+}
+
+/* Inputs (Cajas de texto grandes) */
+input[type="text"] {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* --- ESTILOS ESPECÍFICOS POR PÁGINA --- */
+
+/* Inicio */
+.owl-logo {
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.search-box-large {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.btn-large {
+    width: 200px;
+    font-size: 20px;
+}
+
+/* Préstamos (Lista) */
+.search-bar-top {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.book-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-info h3 {
+    font-size: 20px;
+    color: #000;
+}
+
+.book-info p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Devoluciones */
+.input-full {
+    margin-bottom: 10px;
+}
+.input-full-btn {
+    width: 100%;
+}
+
+/* Reportes */
+.report-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.report-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.footer-text p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* --- LOGO SEBAS WEST EN ESQUINA --- */
+.sebas-west-corner {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: 100px;
+    z-index: 10;
+    opacity: 0.1;
+}
